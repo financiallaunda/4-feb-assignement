@@ -1,0 +1,86 @@
+#Create a python program to sort the given list of tuples based on integer value using a  lambda function.  
+#[('Sachin Tendulkar', 34357), ('Ricky Ponting', 27483), ('Jack Kallis', 25534), ('Virat Kohli', 24936)] 
+
+
+# Given list of tuples
+data = [('Sachin Tendulkar', 34357), ('Ricky Ponting', 27483), ('Jack Kallis', 25534), ('Virat Kohli', 24936)]
+
+# Sorting based on integer value using lambda function
+sorted_data = sorted(data, key=lambda x: x[1])
+
+# Printing the sorted list
+print("Sorted list of tuples based on integer value:")
+for item in sorted_data:
+    print(item)
+
+
+#Write a Python Program to find the squares of all the numbers in the given list of integers using  lambda and map functions. 
+#[1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+
+
+# Given list of integers
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Using lambda and map to find squares
+squared_numbers = list(map(lambda x: x**2, numbers))
+
+# Printing the squares
+print("Squares of numbers in the list:")
+print(squared_numbers)
+
+
+#Write a python program to convert the given list of integers into a tuple of strings. Use map and  lambda functions 
+#Given String: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+#Expected output: ('1', '2', '3', '4', '5', '6', '7', '8', '9', '10') 
+
+
+# Given list of integers
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Using map and lambda to convert integers to strings
+string_tuple = tuple(map(lambda x: str(x), numbers))
+
+# Printing the tuple of strings
+print("Tuple of strings:")
+print(string_tuple)
+
+
+#Write a python program using reduce function to compute the product of a list containing numbers  from 1 to 25. 
+
+from functools import reduce
+import operator
+
+# Generating the list of numbers from 1 to 25
+numbers = list(range(1, 26))
+
+# Using reduce function to compute the product
+product = reduce(operator.mul, numbers)
+
+# Printing the product
+print("Product of numbers from 1 to 25:", product)
+
+
+#Write a python program to filter the numbers in a given list that are divisible by 2 and 3 using the  filter function. 
+
+# Given list of numbers
+numbers = [2, 3, 6, 9, 27, 60, 90, 120, 55, 46]
+
+# Using filter function to filter numbers divisible by both 2 and 3
+filtered_numbers = list(filter(lambda x: x % 2 == 0 and x % 3 == 0, numbers))
+
+# Printing the filtered numbers
+print("Numbers divisible by both 2 and 3:", filtered_numbers)
+
+
+#Write a python program to find palindromes in the given list of strings using lambda and filter  function. 
+#['python', 'php', 'aba', 'radar', 'level'] 
+
+
+# Given list of strings
+strings = ['python', 'php', 'aba', 'radar', 'level']
+
+# Using filter function with lambda to find palindromes
+palindromes = list(filter(lambda x: x == x[::-1], strings))
+
+# Printing the palindromes
+print("Palindromes in the list:", palindromes)
